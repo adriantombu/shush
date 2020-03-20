@@ -1,0 +1,4 @@
+node_modules/
+addon.zip
+addon/app.js
+.DS_Store

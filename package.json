@@ -1,0 +1,40 @@
+{
+  "description": "An addon to mute a list of words on several website like Twitter, Facebook or Linkedin",
+  "author": "Adrian Tombu <adrian@otso.fr> (https://otso.fr)",
+  "license": "GPL-3.0-or-later",
+  "repository": "https://github.com/adriantombu/shush",
+  "bugs": {
+    "url": "https://github.com/adriantombu/shush/issues",
+    "email": "adrian@otso.fr"
+  },
+  "scripts": {
+    "test": "echo \"No tests... yet\" && exit 0",
+    "watch": "webpack --config webpack.config.js --mode production --watch",
+    "build": "webpack --config webpack.config.js --mode production",
+    "publish:chrome": "webstore upload --auto-publish --extension-id hkfbioghcnjpdlpnahoefbbmnoceadeb --source ./addon --client-id $CHROME_CLIENT_ID --client-secret $CHROME_CLIENT_SECRET --refresh-token $CHROME_REFRESH_TOKEN",
+    "publish:firefox": "cd addon && web-ext sign --api-key $FIREFOX_API_KEY --api-secret $FIREFOX_API_SECRET || exit 0",
+    "publish:all": "yarn publish:chrome && yarn publish:firefox"
+  },
+  "devDependencies": {
+    "chrome-webstore-upload-cli": "^1.2.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.8.2",
+    "web-ext": "^4.1.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

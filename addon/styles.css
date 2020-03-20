@@ -1,0 +1,3 @@
+.shush-blurred {
+  filter: blur(10px) grayscale(100%);
+}
