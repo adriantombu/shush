@@ -23,6 +23,7 @@
     "ts-loader": "^6.2.1",
     "typescript": "^3.8.2",
     "web-ext": "^4.1.0",
+    "webextension-polyfill": "^0.6.0",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11"
   },

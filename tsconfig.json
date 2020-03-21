@@ -2,10 +2,7 @@
   "compilerOptions": {
     "target": "es6",
     "module": "es6",
-    "lib": [
-      "esnext",
-      "dom"
-    ],
+    "lib": ["esnext", "dom"],
     "outDir": "addon",
     "noImplicitAny": false,
     "experimentalDecorators": true,
