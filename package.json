@@ -11,7 +11,7 @@
     "test": "echo \"No tests... yet\" && exit 0",
     "watch": "webpack --config webpack.config.js --mode production --watch",
     "build": "webpack --config webpack.config.js --mode production",
-    "publish:chrome": "webstore upload --auto-publish --extension-id hkfbioghcnjpdlpnahoefbbmnoceadeb --source ./addon --client-id $CHROME_CLIENT_ID --client-secret $CHROME_CLIENT_SECRET --refresh-token $CHROME_REFRESH_TOKEN",
+    "publish:chrome": "webstore upload --auto-publish --extension-id gdmhmlcpadohebhkgafcpldlcggdjlml --source ./addon --client-id $CHROME_CLIENT_ID --client-secret $CHROME_CLIENT_SECRET --refresh-token $CHROME_REFRESH_TOKEN",
     "publish:firefox": "cd addon && web-ext sign --api-key $FIREFOX_API_KEY --api-secret $FIREFOX_API_SECRET || exit 0",
     "publish:all": "yarn publish:chrome && yarn publish:firefox"
   },

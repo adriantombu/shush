@@ -2,6 +2,13 @@
 
 I created this addon to mute a list of words on Twitter and Facebook. This is currently only covid-19 related in French and English but I intend to make it way more flexible in the future.
 
+https://addons.mozilla.org/en-GB/firefox/addon/shush/
+
+## Where to install it
+
+- Chrome : [https://chrome.google.com/webstore/detail/shush/gdmhmlcpadohebhkgafcpldlcggdjlml](https://chrome.google.com/webstore/detail/shush/gdmhmlcpadohebhkgafcpldlcggdjlml)
+- Firefox : [https://addons.mozilla.org/addon/shush/](https://addons.mozilla.org/addon/shush/)
+
 ## How to build the extension
 
 ### Requirements
