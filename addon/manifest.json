@@ -27,10 +27,5 @@
       "css": ["styles.css"],
       "run_at": "document_idle"
     }
-  ],
-  "applications": {
-    "gecko": {
-      "id": "shush@otso.fr"
-    }
-  }
+  ]
 }
