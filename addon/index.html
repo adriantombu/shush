@@ -9,12 +9,11 @@
         margin: 0;
         padding: 0;
       }
-      html,
-      body {
+      .content {
         padding: 10px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 16px;
-        max-width: 400px;
+        width: 400px;
         color: #333333;
       }
       [type='button'] {
@@ -75,34 +74,36 @@
   </head>
 
   <body>
-    <div>
-      <h3 style="margin-top: 0">Import a list of expressions</h3>
+    <div class="content">
       <div>
-        <input
-          type="text"
-          id="import-value"
-          value="https://gist.githubusercontent.com/adriantombu/3bf0fd85e8c95ef56d6995a500735e23/raw/c3fbc8ebdb9ad037ee8efa509f2d6b49dbe8b070/shush-covid19.txt"
-        />
-        <input type="button" value="Import" id="import" />
+        <h3 style="margin-top: 0">Import a list of expressions</h3>
+        <div>
+          <input
+            type="text"
+            id="import-value"
+            value="https://gist.githubusercontent.com/adriantombu/3bf0fd85e8c95ef56d6995a500735e23/raw/c3fbc8ebdb9ad037ee8efa509f2d6b49dbe8b070/shush-covid19.txt"
+          />
+          <input type="button" value="Import" id="import" />
+        </div>
+        <p class="notice">The expressions will be merged to your current list, nothing will be overwritten</p>
       </div>
-      <p class="notice">The expressions will be merged to your current list, nothing will be overwritten</p>
-    </div>
 
-    <div>
-      <h3>Add an expression</h3>
       <div>
-        <label><input type="text" id="add-value"/></label>
-        <input type="button" value="Add" id="add" />
+        <h3>Add an expression</h3>
+        <div>
+          <label><input type="text" id="add-value"/></label>
+          <input type="button" value="Add" id="add" />
+        </div>
+        <p class="notice">You can mute a single word, a hashtag, a phrase, whatever you want!</p>
       </div>
-      <p class="notice">You can mute a single word, a hashtag, a phrase, whatever you want!</p>
-    </div>
 
-    <div>
-      <h3>List of muted expressions</h3>
-      <ul id="words"></ul>
-    </div>
+      <div>
+        <h3>List of muted expressions</h3>
+        <ul id="words"></ul>
+      </div>
 
-    <input type="button" value="Remove all expressions" id="reset" />
+      <input type="button" value="Remove all expressions" id="reset" />
+    </div>
 
     <script src="params.js"></script>
   </body>

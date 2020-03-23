@@ -1,28 +1,24 @@
-const browser = require('webextension-polyfill')
+import { storageGet, storageSet } from './storage'
 
-const init = () => {
-  const restoreOptions = values => {
-    const words: Set<string> = values.words || new Set()
+const init = async () => {
+  const words: Set<string> = new Set(await storageGet('words', []))
 
-    for (const word of words) {
-      const buttonNode = document.createElement('input')
-      buttonNode.type = 'button'
-      buttonNode.value = 'x'
-      buttonNode.classList.add('delete')
-      buttonNode.setAttribute('data-value', word)
-      const spanNode = document.createElement('span')
-      spanNode.textContent = word
+  for (const word of words) {
+    const buttonNode = document.createElement('input')
+    buttonNode.type = 'button'
+    buttonNode.value = 'x'
+    buttonNode.classList.add('delete')
+    buttonNode.setAttribute('data-value', word)
+    const spanNode = document.createElement('span')
+    spanNode.textContent = word
 
-      const liNode = document.createElement('li')
-      liNode.appendChild(buttonNode)
-      liNode.appendChild(spanNode)
+    const liNode = document.createElement('li')
+    liNode.appendChild(buttonNode)
+    liNode.appendChild(spanNode)
 
-      document.getElementById('words')?.append(liNode)
-      buttonNode.addEventListener('click', deleteListener)
-    }
+    document.getElementById('words')?.append(liNode)
+    buttonNode.addEventListener('click', deleteListener)
   }
-
-  browser.storage.local.get().then(restoreOptions)
 }
 
 const deleteListener = async e => {
@@ -36,22 +32,15 @@ const deleteListener = async e => {
   }
 }
 
-const updateWords = (word: string, action: 'add' | 'delete') => {
-  return new Promise(resolve => {
-    const update = values => {
-      let words: Set<string> = values.words || new Set()
+const updateWords = async (word: string, action: 'add' | 'delete') => {
+  let words: Set<string> = new Set(await storageGet('words', []))
+  if (action === 'add') {
+    words.add(word)
+  } else {
+    words.delete(word)
+  }
 
-      if (action === 'add') {
-        words.add(word)
-      } else {
-        words.delete(word)
-      }
-
-      browser.storage.local.set({ words }).then(resolve)
-    }
-
-    browser.storage.local.get().then(update)
-  })
+  await storageSet('words', Array.from(words))
 }
 
 const loadWords = async (url: string) => {
@@ -96,8 +85,9 @@ document.getElementById('import')?.addEventListener('click', () => {
     loadWords(url)
   }
 })
-document.getElementById('reset')?.addEventListener('click', () => {
+document.getElementById('reset')?.addEventListener('click', async () => {
   if (confirm('This will permanently delete all your muted words')) {
-    browser.storage.local.set({ words: new Set() }).then(() => window.location.reload())
+    await storageSet('words', [])
+    window.location.reload()
   }
 })

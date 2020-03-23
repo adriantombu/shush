@@ -1,4 +1,6 @@
 node_modules/
 *.zip
 addon/app.js
+addon/params.js
 .DS_Store
+web-ext-artifacts/

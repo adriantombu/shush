@@ -1,19 +1,14 @@
-const browser = require('webextension-polyfill')
+import { storageGet } from './storage'
 import { staticSites, dynamicSites } from './websites'
 
 let muteList: string[] = []
-const init = () => {
-  const restoreOptions = values => {
-    const words: Set<string> = values.words || new Set()
-
-    for (const word of words) {
-      muteList.push(word)
-    }
-
-    main()
+const init = async () => {
+  const words = await storageGet('words', [])
+  for (const word of words) {
+    muteList.push(word)
   }
 
-  browser.storage.local.get().then(restoreOptions)
+  main()
 }
 
 const blur = (post: Element) => {
