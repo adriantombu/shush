@@ -1,13 +1,21 @@
 # Shush! [![Buy me a tree](https://img.shields.io/badge/Buy%20me%20a%20tree-%F0%9F%8C%B3-lightgreen)](https://offset.earth/adrian)
 
-I created this addon to mute a list of words on Twitter and Facebook. This is currently only covid-19 related in French and English but I intend to make it way more flexible in the future.
+I created this addon to mute a list of websites like Twitter, Facebook and Linkedin.
 
-https://addons.mozilla.org/en-GB/firefox/addon/shush/
+It started as a way to hide most of the covid-19 related news in French and English, but I quickly made it more flexible to allow the users to manage their own list of expressions and even allow them to quickly import a list of expressions !
+
+![The addon in action](/screenshot.jpg)
 
 ## Where to install it
 
 - Chrome : [https://chrome.google.com/webstore/detail/shush/gdmhmlcpadohebhkgafcpldlcggdjlml](https://chrome.google.com/webstore/detail/shush/gdmhmlcpadohebhkgafcpldlcggdjlml)
 - Firefox : [https://addons.mozilla.org/addon/shush/](https://addons.mozilla.org/addon/shush/)
+
+## Muted expressions list to import in the addon
+
+- [Coronavirus (FR & EN)](https://gist.githubusercontent.com/adriantombu/3bf0fd85e8c95ef56d6995a500735e23/raw/1d5ea18f4318cb839e5c3dafbb3a0d605858a214/shush-covid19.txt)
+
+You can create your own list on [Gist](https://gist.github.com/), just create a text file with the expressions separated by a comma and that's it !
 
 ## How to build the extension
 
