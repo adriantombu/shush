@@ -1,6 +1,6 @@
 # Shush! [![Buy me a tree](https://img.shields.io/badge/Buy%20me%20a%20tree-%F0%9F%8C%B3-lightgreen)](https://offset.earth/adrian)
 
-I created this addon to mute a list of expressions on websites like Twitter, Facebook and Linkedin.
+I created this addon to mute a list of expressions on websites like Twitter, Facebook and Linkedin. But if the curiosity is too intense, just hover the mouse over the content to unblur it !
 
 It started as a way to hide most of the covid-19 related news in French and English, but I quickly made it more flexible to allow the users to manage their own list of expressions and even allow them to quickly import a list of expressions !
 

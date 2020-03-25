@@ -13,14 +13,7 @@ const init = async () => {
 
 const blur = (post: Element) => {
   if (muteList.some(word => post.textContent?.toLowerCase().includes(word))) {
-    post.classList.add('shush-blurred')
-    post.addEventListener(
-      'mouseover',
-      () => {
-        post.classList.remove('shush-blurred')
-      },
-      { once: true },
-    )
+    post.setAttribute('data-shush', 'blurred')
   }
 }
 

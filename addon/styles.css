@@ -1,3 +1,14 @@
-.shush-blurred {
+[data-shush='blurred'] {
   filter: blur(10px) grayscale(100%);
+  cursor: pointer;
+  -webkit-transition: 0.05s -webkit-filter linear;
+  -moz-transition: 0.05s -moz-filter linear;
+  -moz-transition: 0.05s filter linear;
+  -ms-transition: 0.05s -ms-filter linear;
+  -o-transition: 0.05s -o-filter linear;
+  transition: 0.05s filter linear, 0.05s -webkit-filter linear;
+}
+
+[data-shush='blurred']:hover {
+  filter: none;
 }
