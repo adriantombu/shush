@@ -13,9 +13,9 @@ It started as a way to hide most of the covid-19 related news in French and Engl
 
 ## Muted expressions list to import in the addon
 
-- [Coronavirus (FR & EN)](https://gist.githubusercontent.com/adriantombu/3bf0fd85e8c95ef56d6995a500735e23/raw/1d5ea18f4318cb839e5c3dafbb3a0d605858a214/shush-covid19.txt)
+- [Coronavirus (FR & EN)](https://gist.githubusercontent.com/adriantombu/3bf0fd85e8c95ef56d6995a500735e23/raw/shush-covid19.txt)
 
-You can create your own list on [Gist](https://gist.github.com/), just create a text file with the expressions separated by a comma and that's it !
+You can even create your own list on [Gist](https://gist.github.com/) by creating a text file with the expressions separated by a comma !
 
 ## How to build the extension
 
