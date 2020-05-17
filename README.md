@@ -17,6 +17,30 @@ It started as a way to hide most of the covid-19 related news in French and Engl
 
 You can even create your own list on [Gist](https://gist.github.com/) by creating a text file with the expressions separated by a comma !
 
+## List of websites where you can hide your expressions
+
+- twitter.com
+- facebook.com
+- linkedin.com
+- youtube.com
+- lemonde.fr
+- liberation.fr
+- lesechos.fr
+- lci.fr
+- lopinion.fr
+- lefigaro.fr
+- 20minutes.fr
+- leparisien.fr
+- humanite.fr
+- latribune.fr
+- francesoir.fr
+- lequipe.fr
+- eurosport.fr
+- rugbyrama.fr
+- dhnet.be
+- lalibre.be
+- nytimes.com
+
 ## How to build the extension
 
 ### Requirements
