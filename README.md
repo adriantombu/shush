@@ -6,7 +6,7 @@ It started as a way to hide most of the covid-19 related news in French and Engl
 
 ![The addon in action](/screenshot.jpg)
 
-## Where to install it
+## Where to install it?
 
 - Chrome : [https://chrome.google.com/webstore/detail/shush/gdmhmlcpadohebhkgafcpldlcggdjlml](https://chrome.google.com/webstore/detail/shush/gdmhmlcpadohebhkgafcpldlcggdjlml)
 - Firefox : [https://addons.mozilla.org/addon/shush/](https://addons.mozilla.org/addon/shush/)
@@ -17,7 +17,7 @@ It started as a way to hide most of the covid-19 related news in French and Engl
 
 You can even create your own list on [Gist](https://gist.github.com/) by creating a text file with the expressions separated by a comma !
 
-## List of websites where you can hide your expressions
+## List of websites where you can hide your expressions:
 
 - twitter.com
 - facebook.com
@@ -41,14 +41,14 @@ You can even create your own list on [Gist](https://gist.github.com/) by creatin
 - lalibre.be
 - nytimes.com
 
-## How to build the extension
+## How to build the extension?
 
-### Requirements
+### Requirements:
 
 - **Operating system:** OSX, Linux, Windows
 - **Environment requirements:** [Node 12+](https://nodejs.org/en/)
 
-### Steps
+### Steps:
 
 - Clone or download the repository from [Github](https://github.com/adriantombu/shush)
 - Install the packages with `yarn install` or `npm install`
