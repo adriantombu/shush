@@ -14,7 +14,7 @@ const init = async () => {
 }
 
 const blur = (post: Element) => {
-  if (muteList.some(word => post.innerHTML?.toLowerCase().includes(word))) {
+  if (muteList.some(word => post.textContent?.toLowerCase().includes(word))) {
     post.setAttribute('data-shush', option)
   }
 }
