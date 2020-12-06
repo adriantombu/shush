@@ -12,3 +12,10 @@
 [data-shush='blurred']:hover {
   filter: none;
 }
+
+[data-shush='hidden'] {
+  height: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}

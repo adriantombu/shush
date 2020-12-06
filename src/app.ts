@@ -1,8 +1,10 @@
 import { storageGet } from './storage'
 import { staticSites, dynamicSites } from './websites'
 
+let option: string
 let muteList: string[] = []
 const init = async () => {
+  option = await storageGet('option', 'blurred')
   const words = await storageGet('words', [])
   for (const word of words) {
     muteList.push(word)
@@ -12,8 +14,8 @@ const init = async () => {
 }
 
 const blur = (post: Element) => {
-  if (muteList.some(word => post.textContent?.toLowerCase().includes(word))) {
-    post.setAttribute('data-shush', 'blurred')
+  if (muteList.some(word => post.innerHTML?.toLowerCase().includes(word))) {
+    post.setAttribute('data-shush', option)
   }
 }
 

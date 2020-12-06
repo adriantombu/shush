@@ -19,6 +19,14 @@ const init = async () => {
     document.getElementById('words')?.append(liNode)
     buttonNode.addEventListener('click', deleteListener)
   }
+
+  const option: string = await storageGet('option', 'blurred')
+  document.getElementById(`option-${option}`)?.setAttribute('checked', 'true')
+
+  const optionBlurredNode = document.getElementById('option-blurred')
+  const optionHiddendNode = document.getElementById('option-hidden')
+  optionBlurredNode?.addEventListener('click', changeOption)
+  optionHiddendNode?.addEventListener('click', changeOption)
 }
 
 const deleteListener = async e => {
@@ -30,6 +38,14 @@ const deleteListener = async e => {
     await updateWords(word, 'delete')
     window.location.reload()
   }
+}
+
+const changeOption = async e => {
+  const node = e.currentTarget as HTMLInputElement
+  const value = node?.getAttribute('value')
+
+  await storageSet('option', value)
+  window.location.reload()
 }
 
 const updateWords = async (word: string, action: 'add' | 'delete') => {
