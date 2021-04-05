@@ -1,22 +1,7 @@
-const youtubeSelectors = [
-  'ytd-video-renderer #dismissable',
-  'ytd-rich-grid-video-renderer #dismissable',
-  'ytd-grid-video-renderer #dismissable',
-  'ytd-playlist-video-renderer #content',
-  'ytd-playlist-panel-video-renderer #container',
-  'ytd-compact-video-renderer #dismissable',
-  'ytd-compact-radio-renderer #dismissable',
-  'ytd-clarification-renderer .container',
-  '#primary-inner #player',
-  '#primary-inner #info',
-  '#primary-inner #meta',
-]
-
 export const staticSites = [
   // Social networks
   { url: 'facebook.com', selector: '[id^="hyperfeed_story_id"]' },
   { url: 'linkedin.com', selector: '.feed-shared-update-v2' },
-  { url: 'youtube.com', selector: youtubeSelectors.join(',') },
 
   // France
   {
@@ -104,7 +89,6 @@ export const dynamicSites = [
   { url: 'twitter.com', selector: 'article' },
   { url: 'facebook.com', selector: '[id^="hyperfeed_story_id"]' },
   { url: 'linkedin.com', selector: '.feed-shared-update-v2' },
-  { url: 'youtube.com', selector: youtubeSelectors.join(',') },
 
   // France
   { url: 'lemonde.fr', selector: '.Live__center .New' },

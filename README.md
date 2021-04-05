@@ -22,7 +22,6 @@ You can even create your own list on [Gist](https://gist.github.com/) by creatin
 - twitter.com
 - facebook.com
 - linkedin.com
-- youtube.com
 - lemonde.fr
 - liberation.fr
 - lesechos.fr
